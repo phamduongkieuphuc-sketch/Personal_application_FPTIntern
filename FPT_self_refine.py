@@ -12,6 +12,7 @@ from langchain_core.prompts import (
 # Load environment variables
 load_dotenv()
 FPT_API_KEY = os.getenv("FPT_CLOUD_API_KEY")
+print(FPT_API_KEY)
 API_URL = "https://mkp-api.fptcloud.com/v1/chat/completions"
 MODEL_NAME = "Qwen2.5-Coder-32B-Instruct"
 
