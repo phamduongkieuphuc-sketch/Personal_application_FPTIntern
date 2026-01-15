@@ -43,7 +43,7 @@ You are a chart decision-making assistant.
 Rules:
 - If the data contains latitude/longitude AND population, then you use plotly to draw population bubble chart
 - If the user asks for a map, geographic, globe, world -> use plotly
-- Otherwise, use vegalite to represent data in a analytic chart
+- Otherwise, use vegalite to represent data in an analytic chart
 - Output JSON only
 
 User Question:

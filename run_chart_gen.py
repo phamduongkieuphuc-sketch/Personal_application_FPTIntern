@@ -19,7 +19,7 @@ def send_chart_request(data, question):
         url=CHART_URL,
         headers=HEADERS,
         json=payload,
-        timeout=30
+        timeout=60
     )
 
     response.raise_for_status()
@@ -34,17 +34,17 @@ def absolutize_urls(result: dict) -> dict:
 
 
 if __name__ == "__main__":
-    data = [
-          {"category": 1, "value": 4},
-      {"category": 2, "value": 6},
-      {"category": 3, "value": 10},
-      {"category": 4, "value": 3},
-      {"category": 5, "value": 7},
-      {"category": 6, "value": 8}
-    ]
 
-    question = "Tạo biểu đồ phù hợp cho số liệu"
+    with open("test/test_6.txt", "r") as f:
+        file_content = f.read().strip()
+        print(file_content)
+        
+    json_str = f"[{file_content}]"
+    data = json.loads(json_str)
 
+    print(data)
+
+    question = "Create the most suitable chart to represent the data"
     result = send_chart_request(data, question)
     result = absolutize_urls(result)
 
@@ -53,3 +53,5 @@ if __name__ == "__main__":
     # auto-open chart in browser
     if "view_url" in result:
         webbrowser.open(result["view_url"])
+
+
