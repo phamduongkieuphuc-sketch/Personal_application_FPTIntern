@@ -1,33 +1,33 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "A population pyramid for the US in 2000, created using stack. See https://vega.github.io/vega-lite/examples/concat_population_pyramid.html for a variant of this created using concat.",
-  "data": { "url": "data/population.json"},
-  "transform": [
-    {"filter": "datum.year == 2000"},
-    {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"},
-    {"calculate": "datum.sex == 2 ? -datum.people : datum.people", "as": "signed_people"}
-  ],
-  "width": 300,
-  "height": 200,
-  "mark": "bar",
-  "encoding": {
-    "y": {
-      "field": "age",
-      "axis": null, "sort": "descending"
+
+  "layer": [
+    {
+      "data": {
+        "url": "https://vega.github.io/editor/data/world-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "projection": {"type": "equalEarth"},
+      "mark": {"type": "geoshape", "fill": "#eee", "stroke": "#999"}
     },
-    "x": {
-      "aggregate": "sum", "field": "signed_people",
-      "title": "population",
-      "axis": {"format": "s"}
-    },
-    "color": {
-      "field": "gender",
-      "scale": {"range": ["#675193", "#ca8861"]},
-      "legend": {"orient": "top", "title": null}
+    {
+      "data": {
+        "values": [
+          {"place": "Vietnam", "lat": 14.0583, "lon": 108.2772, "pop": 100000000},
+          {"place": "Japan", "lat": 36.2048, "lon": 138.2529, "pop": 125000000}
+        ]
+      },
+      "mark": {"type": "circle", "color": "green", "opacity": 0.6},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "pop",
+          "type": "quantitative",
+          "scale": {"range": [100, 3000]}
+        },
+        "tooltip": [{"field": "place", "type": "nominal"}]
+      }
     }
-  },
-  "config": {
-    "view": {"stroke": null},
-    "axis": {"grid": false}
-  }
+  ]
 }
