@@ -17,15 +17,8 @@ from langchain_openai import ChatOpenAI
 
 load_dotenv()
 FPT_API_KEY = os.getenv("FPT_CLOUD_API_KEY")
-print(FPT_API_KEY)
-API_URL = "https://mkp-api.fptcloud.com/v1/chat/completions"
 MODEL_NAME = "Qwen2.5-Coder-32B-Instruct"
 VEGALITE_SCHEMA_URL = "https://vega.github.io/schema/vega-lite/v6.json"
-
-headers = {
-    "Authorization": f"Bearer {FPT_API_KEY}",
-    "Content-Type": "application/json",
-    }
 
 class VegaLiteData(BaseModel):
     name: Literal["input_data"] = "input_data"

@@ -25,15 +25,18 @@ def send_chart_request(data, question):
 
 if __name__ == "__main__":
     data = [
-        {"province": "Hà Nội", "lat": 21.0285, "lon": 105.8542, "population": 8400000},
-                {"province": "TP.HCM", "lat": 10.8231, "lon": 106.6297, "population": 9300000},
-                {"province": "Đà Nẵng", "lat": 16.0544, "lon": 108.2022, "population": 1200000},
-                {"province": "Hải Phòng", "lat": 20.8449, "lon": 106.6881, "population": 2100000},
-                {"province": "Cần Thơ", "lat": 10.0452, "lon": 105.7469, "population": 1250000},
+      {"category":"A", "group": "x", "value":0.1},
+      {"category":"A", "group": "y", "value":0.6},
+      {"category":"A", "group": "z", "value":0.9},
+      {"category":"B", "group": "x", "value":0.7},
+      {"category":"B", "group": "y", "value":0.2},
+      {"category":"B", "group": "z", "value":1.1},
+      {"category":"C", "group": "x", "value":0.6},
+      {"category":"C", "group": "y", "value":0.1},
+      {"category":"C", "group": "z", "value":0.2}
     ]
-    question = "Top 3 san pham co doanh thu cao nhat"
 
-    question_1 = "Tao bieu do dan so bubble chart"
+    question_1 = "Tao bieu do phu hop cho so lieu"
 
 
     result = send_chart_request(data, question_1)

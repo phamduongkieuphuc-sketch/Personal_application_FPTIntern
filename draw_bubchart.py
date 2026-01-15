@@ -13,7 +13,6 @@ CHART_RECORD = {}
 
 load_dotenv()
 FPT_API_KEY = os.getenv("FPT_CLOUD_API_KEY")
-print(FPT_API_KEY)
 API_URL = "https://mkp-api.fptcloud.com/v1/chat/completions"
 MODEL_NAME = "Qwen2.5-Coder-32B-Instruct"
 
@@ -34,9 +33,10 @@ class BubbleChart(BaseModel):
 
 app = FastAPI()
 def create_bubble_chart(data):
-    df = pd.DataFrame([d.dict() for d in data])
+    print("REACHED HERE @2")
+    df = pd.DataFrame(data)
 
-    print(df)
+    print("REACHED HERE @3")
 
     fig = plx.scatter_geo(
         df,
@@ -49,10 +49,14 @@ def create_bubble_chart(data):
         title="Population bubble chart",
         )
     
-    min_lat = min([item.lat for item in data])
-    max_lat = max([item.lat for item in data])
-    max_long = max([item.long for item in data])
-    min_long = min([item.long for item in data])
+    print("REACHED HERE @4")
+
+    min_lat = min(item["lat"] for item in data)
+    max_lat = max(item["lat"] for item in data)
+    min_long = min(item["long"] for item in data)
+    max_long = max(item["long"] for item in data)
+
+    print("REACHED HERE @5")
 
 
     fig.update_layout(
@@ -65,6 +69,9 @@ def create_bubble_chart(data):
             coastlinecolor="gray",
             )
     )
+
+    print("REACHED HERE @6")
+
     
     return fig
 
