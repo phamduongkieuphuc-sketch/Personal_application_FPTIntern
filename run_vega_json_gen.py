@@ -36,6 +36,8 @@ if __name__ == "__main__":
       {"category":"C", "group": "z", "value":0.2}
     ]
 
+    print(data)
+
     question_1 = "Tao bieu do phu hop cho so lieu"
 
 
