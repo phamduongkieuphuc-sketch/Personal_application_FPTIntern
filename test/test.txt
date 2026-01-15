@@ -1,0 +1,5 @@
+  { "region": "Bắc", "industry": "Công nghệ", "revenue": 420 },
+  { "region": "Bắc", "industry": "Tài chính", "revenue": 300 },
+  { "region": "Trung", "industry": "Công nghệ", "revenue": 180 },
+  { "region": "Nam", "industry": "Công nghệ", "revenue": 520 },
+  { "region": "Nam", "industry": "Bán lẻ", "revenue": 460 }
