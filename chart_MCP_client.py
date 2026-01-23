@@ -215,7 +215,7 @@ llm = ChatOpenAI(
 )
 
 class ToolDecision(BaseModel):
-    tool_name: Literal["plotly", "vegalite", "none"]
+    tool_name: Literal["plotly_chart", "vegalite_chart", "none"]
     arguments: Optional[dict] = None
     reason: str
 

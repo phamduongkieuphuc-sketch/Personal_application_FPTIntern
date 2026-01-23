@@ -1,18 +1,1 @@
-  {
-    "city": "Hà Nội",
-    "population": 8.4,
-    "avg_income": 450,
-    "sales": 320
-  },
-  {
-    "city": "TP.HCM",
-    "population": 9.2,
-    "avg_income": 520,
-    "sales": 410
-  },
-  {
-    "city": "Đà Nẵng",
-    "population": 1.2,
-    "avg_income": 380,
-    "sales": 150
-  }
+  {"city": "Hà Nội", "population": 6}

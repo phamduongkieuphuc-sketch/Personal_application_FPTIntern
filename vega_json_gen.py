@@ -422,3 +422,6 @@ def home():
     <p>Then visit /{id} to view it.</p>
     """
 '''
+
+
+#VE DIA DIEM THEO HINH MULTIPOLYGON, GIOI HAN O VIETNAM

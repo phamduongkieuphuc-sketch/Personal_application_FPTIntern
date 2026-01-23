@@ -1,7 +1,7 @@
 import requests
 import json
 
-with open("chart.json") as f:
+with open("victoria.geojson") as f:
     spec = json.load(f)
 
 r = requests.post("http://127.0.0.1:8000/render", json=spec)
