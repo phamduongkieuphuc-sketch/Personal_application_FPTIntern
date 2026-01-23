@@ -1,0 +1,5 @@
+{ "category": "Công nghệ", "value": 40 },
+    { "category": "Tài chính", "value": 25 },
+    { "category": "Bán lẻ", "value": 20 },
+    { "category": "Giáo dục", "value": 15 }
+    

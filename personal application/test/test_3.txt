@@ -1,0 +1,56 @@
+{
+    "city": "New York",
+    "population": 8.4,
+    "gdp_billion_usd": 1900,
+    "lat": 40.7128,
+    "long": -74.0060
+  },
+  {
+    "city": "Tokyo",
+    "population": 14.0,
+    "gdp_billion_usd": 2100,
+    "lat": 35.6895,
+    "long": 139.6917
+  },
+  {
+    "city": "London",
+    "population": 9.0,
+    "gdp_billion_usd": 1000,
+    "lat": 51.5074,
+    "long": -0.1278
+  },
+  {
+    "city": "Paris",
+    "population": 2.1,
+    "gdp_billion_usd": 850,
+    "lat": 48.8566,
+    "long": 2.3522
+  },
+  {
+    "city": "Shanghai",
+    "population": 24.9,
+    "gdp_billion_usd": 680,
+    "lat": 31.2304,
+    "long": 121.4737
+  },
+  {
+    "city": "Beijing",
+    "population": 21.5,
+    "gdp_billion_usd": 700,
+    "lat": 39.9042,
+    "long": 116.4074
+  },
+  {
+    "city": "Singapore",
+    "population": 5.9,
+    "gdp_billion_usd": 400,
+    "lat": 1.3521,
+    "long": 103.8198
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "population": 9.2,
+    "gdp_billion_usd": 170,
+    "lat": 10.8231,
+    "long": 106.6297
+  }
