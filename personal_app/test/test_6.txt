@@ -1,0 +1,11 @@
+{ "year": 2021, "industry": "Công nghệ", "revenue": 120 },
+  { "year": 2021, "industry": "Tài chính", "revenue": 80 },
+  { "year": 2021, "industry": "Bán lẻ", "revenue": 60 },
+
+  { "year": 2022, "industry": "Công nghệ", "revenue": 150 },
+  { "year": 2022, "industry": "Tài chính", "revenue": 110 },
+  { "year": 2022, "industry": "Bán lẻ", "revenue": 90 },
+
+  { "year": 2023, "industry": "Công nghệ", "revenue": 200 },
+  { "year": 2023, "industry": "Tài chính", "revenue": 140 },
+  { "year": 2023, "industry": "Bán lẻ", "revenue": 120 }
