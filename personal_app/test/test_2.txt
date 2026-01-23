@@ -1,5 +1,0 @@
-  { "year": 2019, "growth_rate": 1.1 },
-  { "year": 2020, "growth_rate": 1.0 },
-  { "year": 2021, "growth_rate": 0.9 },
-  { "year": 2022, "growth_rate": 1.2 },
-  { "year": 2023, "growth_rate": 1.3 }

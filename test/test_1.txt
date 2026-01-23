@@ -1,4 +1,0 @@
-  { "city": "Việt Nam", "lat": 14.06, "long": 108.28, "population": 100 },
-  { "city": "Nhật Bản", "lat": 36.20, "long": 138.25, "population": 125 },
-  { "city": "Pháp", "lat": 46.60, "long": 1.88, "population": 65 },
-  { "city": "Mỹ", "lat": 37.09, "long": -95.71, "population": 331 }
