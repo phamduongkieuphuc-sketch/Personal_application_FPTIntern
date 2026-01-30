@@ -1,0 +1,10 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ahoa_Dockerfile
+    container_name: postgres-query-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+

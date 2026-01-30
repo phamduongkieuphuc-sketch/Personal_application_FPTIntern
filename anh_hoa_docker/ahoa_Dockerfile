@@ -1,0 +1,24 @@
+FROM python:3.12-slim
+
+# Do not create pycache
+ENV PYTHONDONTWRITEBYTECODE=1
+
+WORKDIR /app
+
+# Dependencies for building psycopg2
+# gcc needed for native C extensions such as psycopg2
+# libpq = PostgreSQL client library
+RUN apt-get update && apt-get install -y gcc libpq-dev
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy app code
+COPY app.py .
+
+# Expose connecting port
+EXPOSE 8000
+
+# Execution command
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
