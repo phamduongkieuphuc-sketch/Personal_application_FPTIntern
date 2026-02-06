@@ -1,10 +1,21 @@
+# services:
+#   postgis:
+#     image: postgis/postgis:16-3.4
+#     container_name: postgis
+#     environment:
+#       POSTGRES_DB: gisdb
+#       POSTGRES_USER: gisuser
+#       POSTGRES_PASSWORD: gispass
+#     ports:
+#       - 5432:5432
+
 services:
-  postgis:
-    image: postgis/postgis:16-3.4
-    container_name: postgis
-    environment:
-      POSTGRES_DB: gisdb
-      POSTGRES_USER: gisuser
-      POSTGRES_PASSWORD: gispass
+  api:
+    build:
+      context: .
+      dockerfile: ahoa_Dockerfile
+    container_name: postgres-query-api
     ports:
-      - 5432:5432
+      - "8000:8000"
+    restart: unless-stopped
+

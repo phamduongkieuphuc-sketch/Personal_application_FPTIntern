@@ -32,6 +32,7 @@ class VegaLiteSpec(BaseModel):
     encoding: Dict[str, Any]
     transform: Optional[list]
 
+# ChatOpenAI translates LangChain messages into the OpenAI Chat/Responses API format and sends them to your (base or fine-tuned) GPT model.
 llm = ChatOpenAI(
     model=MODEL_NAME,
     api_key=FPT_API_KEY,
@@ -422,6 +423,3 @@ def home():
     <p>Then visit /{id} to view it.</p>
     """
 '''
-
-
-#VE DIA DIEM THEO HINH MULTIPOLYGON, GIOI HAN O VIETNAM
